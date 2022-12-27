@@ -1,0 +1,143 @@
+:root {
+    --logo-font: 'Lobster', cursive;
+    --main-font: 'Sora', sans-serif;
+    --main-color:  #BC8034;
+    
+}
+
+h1,h2,h3,h4,h5,p {
+    margin: 0;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: var(--main-font);
+    color: white;
+    margin: 0;
+}
+
+input {
+    width: 50rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0 1rem;
+    padding-right: 50px;
+    font-size: 1.5rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    grid-area: h;
+
+}
+
+main {
+    grid-area: m;
+    text-align: center;
+    margin: auto auto;
+}
+
+
+
+
+footer {
+    grid-area: f;
+}
+
+footer h3 {
+    margin-bottom: 5px;
+}
+
+footer > * {
+    align-items: center;
+    text-align: center;
+
+}
+
+nav li {
+    font-size: 13px;
+}
+
+.line {
+    padding-bottom: 2px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding-right: 15px;
+    width: fit-content;
+}
+
+#login-button {
+    border: 1px solid white;
+    border-radius: 20px;
+    grid-area: lb;
+    }
+
+#nav-logo {
+    grid-area: l;
+    margin-left: 1rem;
+    font-family: var(--logo-font);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.logo-font {
+    font-family: var(--logo-font);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'l h h lb'
+    'm m m m'
+    'f f f f'
+    ;
+    grid-template-columns: 0.2fr 1fr 1fr;
+    grid-template-rows: 1fr 14fr 1fr;
+}
+
+@media screen and (max-width: 660px) {
+    .grid-container {
+        grid-template-areas: 
+        'l h lb'
+        'm'
+        'f'
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 15fr 1fr;      
+    }
+
+    main {
+        text-align: unset;
+    }
+
+    input {
+        width: 25rem;
+    }
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin: 10px auto;
+    padding: 0 1rem;
+    list-style-type: none;
+
+}
+
+.hero-text {
+    font-family: var(--logo-font);
+    font-size: 100px;
+    margin: 0 auto;
+    line-height: 140px;
+    letter-spacing: 0.12em;
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
